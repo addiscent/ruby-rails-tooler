@@ -5,11 +5,6 @@
 # Usage :
 #   sudo  ./ruby-rails-tooler.sh   username
 #
-# This script does two things, then it calls another script for the task of
-# installing Ruby/Rails.  Because I spin up new ones so often, I use this
-# script to set a better hostname and prompt on my newly created VagrantBox
-# and VirtualBox instances, and then it installs Ruby/Rails/Tools.
-#
 # The first thing this script does is set a hostname to "username-ruby-rails",
 # then it sets a custom promt.  After that, it downloads and executes another
 # of my GitHub project scripts named "ruby-rails-tools-install.sh", which does
@@ -72,6 +67,7 @@ mls() {
 }
 
 EOF
+
 echo "" >> /tmp/bashrc-mod.txt
 cat /tmp/bashrc-mod.txt >> /home/${host_user}/.bashrc
 cat /tmp/bashrc-mod.txt >> /root/.bashrc
